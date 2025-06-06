@@ -35,7 +35,7 @@
 ```bash
 # 1. 프로젝트를 복제합니다.
 git clone git@github.com:Shin0909-dev/deepface.git
-cd deepface # 프로젝트 폴더로 이동
+cd deepface/project # 프로젝트 폴더로 이동
 
 # 2. database 폴더에 기준이 될 인물 사진을 넣습니다.
 # 예: database/steve_jobs.jpg, database/bill_gates.png
@@ -46,7 +46,7 @@ cd deepface # 프로젝트 폴더로 이동
 ### 3. Docker 이미지 빌드
 ```bash
 # 현재 디렉토리에서 'photo-classifier'라는 이름의 도커 이미지를 빌드합니다.
-docker build -t photo-classifier .
+docker build --no-cache -t photo-classifier .
 ```
 
 ### 4. Docker 컨테이너 실행
