@@ -13,11 +13,17 @@
 - tf-keras
 
 ## Directory Structure 
-- `database/`: 분류의 기준이 될 인물의 대표 사진을 한 장씩 저장하는 폴더입니다. 파일 이름이 인물 이름(폴더명)이 됩니다. (예: `elon_musk.jpg`)
-- `input_photos/`: 분류를 원하는 사진들을 넣어두는 폴더입니다.
-- `output_photos/`: 분류 작업 후 결과가 저장되는 폴더입니다. 인물별 하위 폴더와 `_unknown` 폴더가 생성됩니다.
-- `main.py`: 사진 분류를 수행하는 메인 파이썬 스크립트입니다.
-- `Dockerfile`: 프로젝트 실행 환경을 정의하는 도커 파일입니다.
+- project/
+├── README.md           # 프로젝트 설명 및 실행 방법을 담은 설명서
+├── Dockerfile          # Docker 이미지 생성을 위한 설정 파일
+├── main.py             # 사진 분류를 실행하는 메인 파이썬 스크립트
+├── requirements.txt    # 파이썬 실행에 필요한 라이브러리 목록
+├── database/           # 분류 기준이 될 인물의 대표 사진 저장 폴더
+├── input_photos/       # 분류할 원본 사진들을 저장하는 폴더
+├── output_photos/      # 분류 완료된 사진들이 저장되는 폴더
+└── .github/
+    └── workflows/
+        └── test-main.yml # GitHub Actions 자동 테스트 워크플로우
 
 ## How to install & Run 
 
