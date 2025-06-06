@@ -27,7 +27,7 @@
 ### 2. 프로젝트 설정
 ```bash
 # 1. 프로젝트를 복제합니다.
-git clone [https://github.com/YOUR_USERNAME/deepface.git](https://github.com/YOUR_USERNAME/deepface.git)
+git clone git@github.com:Shin0909-dev/deepface.git
 cd deepface # 프로젝트 폴더로 이동
 
 # 2. database 폴더에 기준이 될 인물 사진을 넣습니다.
