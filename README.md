@@ -2,23 +2,23 @@
 
 `deepface` 라이브러리를 활용하여 지정된 폴더의 사진들을 인물별로 자동 분류하는 프로그램입니다.
 
-## [cite_start]Goal 
+## Goal 
 이 프로젝트의 목표는 특정 폴더에 섞여 있는 여러 인물의 사진들을 `deepface`의 얼굴 인식(Face Recognition) 기능을 사용하여, 인물별로 자동으로 폴더를 만들어 분류하고 정리하는 것입니다.
 
-## [cite_start]Requirements 
+## Requirements 
 - deepface>=0.0.79
 - tensorflow>=2.5.0
 - opencv-python-headless>=4.5.0
 - pandas>=1.0.0
 
-## [cite_start]Directory Structure 
+## Directory Structure 
 - `database/`: 분류의 기준이 될 인물의 대표 사진을 한 장씩 저장하는 폴더입니다. 파일 이름이 인물 이름(폴더명)이 됩니다. (예: `elon_musk.jpg`)
 - `input_photos/`: 분류를 원하는 사진들을 넣어두는 폴더입니다.
 - `output_photos/`: 분류 작업 후 결과가 저장되는 폴더입니다. 인물별 하위 폴더와 `_unknown` 폴더가 생성됩니다.
 - `main.py`: 사진 분류를 수행하는 메인 파이썬 스크립트입니다.
 - `Dockerfile`: 프로젝트 실행 환경을 정의하는 도커 파일입니다.
 
-## [cite_start]How to install & Run 
+## How to install & Run 
 
 ### 1. 사전 준비
 로컬 컴퓨터에 `Git`과 `Docker`가 설치되어 있어야 합니다.
@@ -59,5 +59,6 @@ docker run --rm \
 본 프로그램은 `input_photos` 폴더의 모든 사진을 분류한 후 자동으로 종료됩니다. 컨테이너 또한 `--rm` 옵션으로 인해 자동으로 삭제되므로 별도의 종료 과정이 필요 없습니다.
 
 ## 결과물
-![결과1](https://github.com/user-attachments/assets/b27677a9-af57-4e3c-b162-c42d18b6afd8)
+deepface 라이브러리가 사용하는 VGG-Face, FaceNet, ArcFace 같은 모델들은 대부분 서양인 얼굴 위주의 데이터셋으로 학습되어 있어 일론 머스크는 정확히 분류가 되지만, 한국인(유재석, 마동석)은 unknown폴더로 분류되는 모습을 볼 수 있습니다.
+![결과3](https://github.com/user-attachments/assets/28db120f-93d7-4a9e-ba37-ae7bab002ac0)
 ![결과2](https://github.com/user-attachments/assets/631eb1de-5307-4ea9-b7a8-a86db126b877)
