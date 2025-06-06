@@ -10,6 +10,7 @@
 - tensorflow>=2.5.0
 - opencv-python-headless>=4.5.0
 - pandas>=1.0.0
+- tf-keras
 
 ## Directory Structure 
 - `database/`: 분류의 기준이 될 인물의 대표 사진을 한 장씩 저장하는 폴더입니다. 파일 이름이 인물 이름(폴더명)이 됩니다. (예: `elon_musk.jpg`)
