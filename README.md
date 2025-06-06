@@ -23,8 +23,8 @@
 ├── input_photos/       # 분류할 원본 사진들을 저장하는 폴더<br>
 ├── output_photos/      # 분류 완료된 사진들이 저장되는 폴더<br>
 └── .github/<br>
-    └── workflows/<br>
-        └── test-main.yml # GitHub Actions 자동 테스트 워크플로우
+&nbsp;&nbsp;&nbsp;&nbsp;└── workflows/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── test-main.yml # GitHub Actions 자동 테스트 워크플로우
 
 ## How to install & Run 
 
