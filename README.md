@@ -57,3 +57,7 @@ docker run --rm \
 
 ## How to Exit 
 본 프로그램은 `input_photos` 폴더의 모든 사진을 분류한 후 자동으로 종료됩니다. 컨테이너 또한 `--rm` 옵션으로 인해 자동으로 삭제되므로 별도의 종료 과정이 필요 없습니다.
+
+## 결과물
+![결과1](https://github.com/user-attachments/assets/b27677a9-af57-4e3c-b162-c42d18b6afd8)
+![결과2](https://github.com/user-attachments/assets/631eb1de-5307-4ea9-b7a8-a86db126b877)
