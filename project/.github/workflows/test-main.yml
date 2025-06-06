@@ -23,3 +23,4 @@ jobs:
     - name: Test with a simple import
       run: |
         python -c "from deepface import DeepFace; print('DeepFace imported successfully!')"
+        pip install -r requirements.txt
