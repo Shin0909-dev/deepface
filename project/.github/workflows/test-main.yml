@@ -1,27 +1,29 @@
-# .github/workflows/test-main.yml
-name: Python application test
+name: Python Application Test CI
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches: [ "main", "master" ]
   pull_request:
-    branches: [ "master", "main" ]
+    branches: [ "main", "master" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.9"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install deepface
-    - name: Test with a simple import
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        python -c "from deepface import DeepFace; print('DeepFace imported successfully!')"
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Test with a simple import
+        run: |
+          python -c "from deepface import DeepFace; print('DeepFace imported successfully!')"
