@@ -59,6 +59,13 @@ docker run --rm \
 ## How to Exit 
 본 프로그램은 `input_photos` 폴더의 모든 사진을 분류한 후 자동으로 종료됩니다. 컨테이너 또한 `--rm` 옵션으로 인해 자동으로 삭제되므로 별도의 종료 과정이 필요 없습니다.
 
+## Licence
+DeepFace is licensed under the MIT License - see LICENSE for more details.
+
+DeepFace wraps some external face recognition models: VGG-Face, Facenet (both 128d and 512d), OpenFace, DeepFace, DeepID, ArcFace, Dlib, SFace, GhostFaceNet and Buffalo_L. Besides, age, gender and race / ethnicity models were trained on the backbone of VGG-Face with transfer learning. Similarly, DeepFace wraps many face detectors: OpenCv, Ssd, Dlib, MtCnn, Fast MtCnn, RetinaFace, MediaPipe, YuNet, Yolo and CenterFace. Finally, DeepFace is optionally using face anti spoofing to determine the given images are real or fake. License types will be inherited when you intend to utilize those models. Please check the license types of those models for production purposes.
+
+DeepFace logo is created by Adrien Coquet and it is licensed under Creative Commons: By Attribution 3.0 License.
+
 ## 결과물
 deepface 라이브러리가 사용하는 VGG-Face, FaceNet, ArcFace 같은 모델들은 대부분 서양인 얼굴 위주의 데이터셋으로 학습되어 있어 일론 머스크는 정확히 분류가 되지만, 한국인(유재석, 마동석)은 unknown폴더로 분류되는 모습을 볼 수 있습니다.
 ![결과3](https://github.com/user-attachments/assets/28db120f-93d7-4a9e-ba37-ae7bab002ac0)
