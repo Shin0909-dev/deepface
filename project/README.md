@@ -44,12 +44,17 @@ cd deepface/project # 프로젝트 폴더로 이동
 mkdir input_photos
 
 # 4. input_photos 폴더에 분류할 사진들을 넣습니다.
+
+# 5. 예시 파일은 다음과 같이 다운로드 받을 수 있습니다. (docker에 이미지 파일이 업로드 되어있다면 가능합니다.)
+docker create --name temp_container final_2020038023:v1
+docker cp temp_container:/app/. .
+docker rm temp_container
 ```
 
 ### 3. Docker 이미지 빌드
 ```bash
-# 현재 디렉토리에서 'photo-classifier'라는 이름의 도커 이미지를 빌드합니다.
-docker build --no-cache -t photo-classifier .
+# 현재 디렉토리에서 'final_2020038023:v1'라는 이름의 도커 이미지를 빌드합니다.
+docker build --no-cache -t final_2020038023:v1 .
 ```
 
 ### 4. Docker 컨테이너 실행
@@ -60,7 +65,7 @@ docker run --rm \
   -v $(pwd)/database:/app/database \
   -v $(pwd)/input_photos:/app/input_photos \
   -v $(pwd)/output_photos:/app/output_photos \
-  photo-classifier
+  final_2020038023:v1
 ```
 
 ### 5. 실행 확인
