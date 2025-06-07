@@ -1,5 +1,4 @@
 # Dockerfile
-
 # 1. 베이스 이미지 설정
 FROM python:3.9-slim
 
@@ -13,12 +12,8 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. 필요한 파일들을 명시적으로 복사
-COPY README.md .
-COPY main.py .
-# 만약 스크립트가 특정 폴더를 필요로 한다면 해당 폴더도 추가
-# COPY database/ ./database/ 
-# COPY models/ ./models/
+# 5. 현재 디렉토리의 모든 파일을 컨테이너의 /app 디렉토리로 복사
+COPY . .
 
 # 6. 컨테이너가 시작될 때 실행할 명령어
 CMD ["python", "main.py"]
