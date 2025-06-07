@@ -40,7 +40,10 @@ cd deepface/project # 프로젝트 폴더로 이동
 # 2. database 폴더에 기준이 될 인물 사진을 넣습니다.
 # 예: database/steve_jobs.jpg, database/bill_gates.png
 
-# 3. input_photos 폴더에 분류할 사진들을 넣습니다.
+# 3. input_photos 폴더를 만듭니다.
+mkdir input_photos
+
+# 4. input_photos 폴더에 분류할 사진들을 넣습니다.
 ```
 
 ### 3. Docker 이미지 빌드
