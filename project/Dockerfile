@@ -13,7 +13,11 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 5. 현재 디렉토리의 모든 파일을 컨테이너의 /app 디렉토리로 복사
-COPY . .
+COPY requirements.txt .
+COPY README.md .
+COPY main.py .
+COPY database/ ./database/
+COPY input_photos/ ./input_photos/
 
 # 6. 컨테이너가 시작될 때 실행할 명령어
 CMD ["python", "main.py"]
