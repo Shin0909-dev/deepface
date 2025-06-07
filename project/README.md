@@ -4,6 +4,7 @@
 
 ## Goal 
 이 프로젝트의 목표는 특정 폴더에 섞여 있는 여러 인물의 사진들을 `deepface`의 얼굴 인식(Face Recognition) 기능을 사용하여, 인물별로 자동으로 폴더를 만들어 분류하고 정리하는 것입니다.
+평소 사진 폴더에 아무렇게 저장 되어있는 인물 사진들 중 원하는 인물 사진들을 하나의 폴더에 인물별로 모아서 한번에 볼 수 있음.
 
 ## Requirements 
 - deepface>=0.0.79
@@ -13,17 +14,17 @@
 - tf-keras
 
 ## Directory Structure 
-- project/
-├── README.md           # 프로젝트 설명 및 실행 방법을 담은 설명서
-├── Dockerfile          # Docker 이미지 생성을 위한 설정 파일
-├── main.py             # 사진 분류를 실행하는 메인 파이썬 스크립트
-├── requirements.txt    # 파이썬 실행에 필요한 라이브러리 목록
-├── database/           # 분류 기준이 될 인물의 대표 사진 저장 폴더
-├── input_photos/       # 분류할 원본 사진들을 저장하는 폴더
-├── output_photos/      # 분류 완료된 사진들이 저장되는 폴더
-└── .github/
-    └── workflows/
-        └── test-main.yml # GitHub Actions 자동 테스트 워크플로우
+- project/<br>
+├── README.md           # 프로젝트 설명 및 실행 방법을 담은 설명서<br>
+├── Dockerfile          # Docker 이미지 생성을 위한 설정 파일<br>
+├── main.py             # 사진 분류를 실행하는 메인 파이썬 스크립트<br>
+├── requirements.txt    # 파이썬 실행에 필요한 라이브러리 목록<br>
+├── database/           # 분류 기준이 될 인물의 대표 사진 저장 폴더<br>
+├── input_photos/       # 분류할 원본 사진들을 저장하는 폴더<br>
+├── output_photos/      # 분류 완료된 사진들이 저장되는 폴더<br>
+└── .github/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;└── workflows/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── test-main.yml # GitHub Actions 자동 테스트 워크플로우
 
 ## How to install & Run 
 
@@ -34,7 +35,7 @@
 ```bash
 # 1. 프로젝트를 복제합니다.
 git clone git@github.com:Shin0909-dev/deepface.git
-cd deepface # 프로젝트 폴더로 이동
+cd deepface/project # 프로젝트 폴더로 이동
 
 # 2. database 폴더에 기준이 될 인물 사진을 넣습니다.
 # 예: database/steve_jobs.jpg, database/bill_gates.png
@@ -45,7 +46,7 @@ cd deepface # 프로젝트 폴더로 이동
 ### 3. Docker 이미지 빌드
 ```bash
 # 현재 디렉토리에서 'photo-classifier'라는 이름의 도커 이미지를 빌드합니다.
-docker build -t photo-classifier .
+docker build --no-cache -t photo-classifier .
 ```
 
 ### 4. Docker 컨테이너 실행
